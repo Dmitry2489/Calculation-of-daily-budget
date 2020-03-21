@@ -28,19 +28,6 @@ let startBtn = document.getElementById('start'),
 let money, time;
 let sumExpensesValue = 0;
 
-expensesBtn.setAttribute('disabled', 'disabled');
-optionalExpensesBtN.setAttribute('disabled', 'disabled');
-countBtn.setAttribute('disabled', 'disabled');
-expensesBtn.setAttribute('title', ' Нажмити кнопку "Начать расчет"');
-optionalExpensesBtN.setAttribute('title', ' Не нажали кнопку "Начать расчет"');
-countBtn.setAttribute('title', ' Не нажали кнопку "Начать расчет"');
-// btnAll.forEach(element => {
-
-// });
-btnAll.forEach(function (item, i, arr) {
-    console.log(i + ": " + item + " (массив:" + arr + ")");
-});
-
 for (let i = 0; i < btnAll.length - 1; i++) {
     btnAll[i].setAttribute('disabled', 'disabled');
     btnAll[i].style.display = 'none';
@@ -48,7 +35,7 @@ for (let i = 0; i < btnAll.length - 1; i++) {
 
 
 startBtn.addEventListener('click', function () {
-    time = prompt("Введите дату в формате YYYY-MM-DD", "");
+    time = prompt("Введите дату в формате ГОД-МЕСЯЦ-ДЕНЬ", "");
     money = +prompt("Ваш бюджет на месяц?", "");
     while (time == '') {
         time = prompt("Введите дату в формате ГОД-МЕСЯЦ-ДЕНЬ", "");
